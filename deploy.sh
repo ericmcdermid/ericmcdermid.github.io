@@ -41,4 +41,4 @@ echo "🔙 Returning to main..."
 git checkout main
 
 echo "🎉 Deployment complete!"
-echo "Fluff"
+echo "Fluffy"
