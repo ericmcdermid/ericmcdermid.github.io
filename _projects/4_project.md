@@ -1,80 +1,29 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: "Two's Company, Three's a Conspiracy"  
+description: Dynamic Network Analysis of 2 Samuel
 img:
 importance: 3
-category: fun
+category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+#### Overview
+A conversation network of a literary text is a graph with a node for each character, and an edge between any two characters with dialogue between them.  We can think of a conversation network as being static by modeling a fixed snapshot of the text, or dynamic, by modeling the data as a sequence of static networks that shows the evolution of the network over time.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This work analyzes the Hebrew text of 2 Samuel using a dynamic conversation network.  By treating a verse as a unit of “time”, we construct a sequence of static conversation networks G1, G2, …, Gt (one per verse), that shows the evolution of the interconnectivity of the characters. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+As the network unfolds over time, we observe a shift take place in the ~125 verses spanning 2 Sam 13-16.  Specifically, we observe (i) a threefold increase in the number of triangles in the network, which is characterized by (ii) a probability shift in the interconnectivity of David’s neighboring nodes (30% to 67%).      
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Inspection of these new triangles reveals exactly three nodes with the following characteristics:
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+    (1) They are all new to the narrative
+    (2) They have a degree of exactly 2
+    (3) Have the same Katz centrality value
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+These characters are:  the Woman of Tekoa, Hushai, and Jonadab.  While the first two of these characters are known to have subversive designs, Jonadab’s intentions remain mysterious.  We explore how his structural isomorphism to these characters supports reading Jonadab similarly to how the Woman of Tekoa and Hushai are understood:  as conspirators.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The work constitutes a case study in the ways computational techniques can yield results that are interesting not only in their own right, but can also open new interpretive insights to biblical texts.
 
-{% raw %}
+#### Data and Analysis 
+The author constructed the data set by manually working through the Hebrew text and recording in a database all instances of dialogue between characters.  All computational work was done by the author using the Python programming language.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
