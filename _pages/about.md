@@ -21,7 +21,7 @@ announcements:
 <br>
 <br>
 ### About
-I completed a **PhD in Computing Science** at the University of Glasgow in 2011, where I was fully funded by an **EPSRC research grant**.  Throughout the mid 2000s to the mid 2010s I published some **20 papers** in the areas of algorithms, computational complexity, and graph theory.
+I completed a **PhD in Computing Science** at the University of Glasgow in 2011, where I was fully funded by an **EPSRC research grant**.  Throughout the mid 2000s to the mid 2010s I published **~20 papers** in the areas of algorithms, computational complexity, and graph theory.
 
 I then spent some time working in industry, and after 11+ years as **Senior Machine Learning Engineer at Apple** I left to return to research and academic pursuits!
 
