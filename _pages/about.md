@@ -6,7 +6,7 @@ subtitle: I apply and create computational tools to Old Testament literature in 
 
 profile:
   align: right
-  image: picture_of_me.jpg
+  image: garden_of_gods.png
   image_circular: false # crops the image to make it circular
   more_info: >
 
